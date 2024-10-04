@@ -81,7 +81,7 @@ const Result = () => {
   const mbti = searchParams.get("mbti");
   const navigate = useNavigate();
   const handleClickButton = () => {
-    navigate("/question");
+    navigate("/");
   };
   useEffect(() => {
     const result = ResultData.find((s) => s.best === mbti);
@@ -103,7 +103,7 @@ const Result = () => {
         <Desc>{resultData.desc}</Desc>
         <ButtonGroup>
           <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
-          <KakaoShareButton />
+          <KakaoShareButton data={resultData} />
         </ButtonGroup>
       </Contents>
     </Wrapper>
