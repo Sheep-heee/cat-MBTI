@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { ResultData } from "../assets/resultData";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Wrapper = styled.div`
   display: flex;
@@ -62,6 +63,18 @@ const Desc = styled.div`
   font-size: 20px;
 `;
 
+const ButtonGroup = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  & > button {
+    width: 100%;
+    font-size: 18px;
+  }
+`;
+
 const Result = () => {
   const [resultData, setResultData] = useState({});
   const [searchParams] = useSearchParams();
@@ -88,7 +101,10 @@ const Result = () => {
           {resultData.name}
         </Desc>
         <Desc>{resultData.desc}</Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <ButtonGroup>
+          <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+          <KakaoShareButton />
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
