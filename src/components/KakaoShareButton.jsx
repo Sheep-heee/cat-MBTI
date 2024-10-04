@@ -22,11 +22,6 @@ const KakaoShareButton = ({ data }) => {
           webUrl: resultURL,
         },
       },
-      social: {
-        likeCount: 10,
-        commentCount: 20,
-        sharedCount: 30,
-      },
       buttons: [
         {
           title: "나도 테스트 하러가기",
