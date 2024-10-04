@@ -16,7 +16,13 @@ const Wrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 130px;
-  transform: translateY(-50%);
+  transform: translate(0, -50%);
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const Title = styled.div`
@@ -31,14 +37,22 @@ const Title = styled.div`
 `;
 
 const ButtonGroup = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+  }
   & > button {
     width: 165px;
     height: 250px;
     font-size: 18px;
+    @media screen and (max-width: 780px) {
+      width: 100%;
+      height: 150px;
+    }
   }
 `;
 

@@ -17,6 +17,12 @@ const Wrapper = styled.div`
   top: 50%;
   left: 130px;
   transform: translateY(-50%);
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const Header = styled.div`
@@ -43,6 +49,10 @@ const LogoImg = styled.div`
     height: 300px;
     border: 4px solid #eee;
     object-fit: cover;
+    @media screen and (max-width: 780px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 `;
 
